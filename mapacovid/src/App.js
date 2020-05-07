@@ -21,7 +21,7 @@ export default function App() {
   const [activeCrime, setActiveCrime] = React.useState(null);
 
   return (
-    <Map center={[52.6376, -1.135171]} zoom={12}>
+    <Map center={[21.1607406, -86.8613988]} zoom={12}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
