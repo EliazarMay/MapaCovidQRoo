@@ -28,3 +28,13 @@ La etiqueta Marker nos permite hacer uso de puntos especificos y la etiqueta Map
 el municipio de Benito Juárez
 
 En la ubicación /public estaran la imagenes con formato svg para detallar lugares expecificos y no áreas
+
+### `Primer avance del proyecto`
+
+Los servicios que utilizamos son los siguientes:
+
+API Gateway: esta API nos permite crear y administrar los datos creando recursos y añadiendo metodos a cada uno, por ejemplo en nuestro caso creímos necesarios el uso de dos métodos, Get para poder hacer uso de los datos y POST para poder enviar los datos, esto lo hacemos mediante un json con los atributos descripción, latitud y longitud, para poder hacer funcionar estos métodos hay otro servicio llamada Lambda que nos permite conectar el codigo con el endpoint.
+
+Lambda: Aquí creamos funciones (código), estas funciones están escritas en javascript (Node.js 12.x) en el código hay un controlador el cual es el método en la función Lambda que procesa eventos cuando se invoca una función, el tiempo de ejecución ejecuta el método del controlador aquí se describe que hará cada uno de los métodos que se muestran en API gateway por ejemplo en el caso del metodo Get describe la estructura del objeto y en el caso de POST debe recibir un json para poder procesarlo, finalmente se almacena en una base de datos no relacional como lo es DynamoDB.
+
+DynamoDB: principalmente permite integrar las funciones de API Gateway y Lambda para poder almacenar datos de manera no relacional, esta funcionalidad aun no la tenemos desarrollada por completo ya que se ve un problema al momento de hacer envío por medio de un formulario con las coordenadas.
