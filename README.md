@@ -12,6 +12,8 @@ Libreria (Leaflet): Permite visualizar mapas interactivos y añadir puntos de en
 * Clonar el repositorio en xaamp
 * Abrir el proyecto en localhost/[nombrecarpeta]
 * En la en archivo js/funciones.js linea 6 modificar el archivo con extension .json
+
+
 Nota:
 * Si requiere observar los puntos de zonas cambiar el archivo por puntos.json
 * Si requiere observar las avenidad cambiar por lineas.json
